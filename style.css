@@ -1,0 +1,246 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-image: radial-gradient( hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+   justify-content: center;
+    max-height: 100vh;
+    color: white;
+   padding: 4rem;
+   overflow: hidden;
+}
+
+
+.all{
+    display: grid;
+    padding: 2rem;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    border: 1px solid rgb(219, 217, 217);
+    gap: 33rem;
+    border-radius: 10px;
+}
+
+.header .right{
+    width: 150px;
+    height: 100px;
+    padding:0.7rem 5rem;
+    border-radius: 10px;
+    color: #333;
+    background-color: aliceblue;
+    display: grid;
+    place-items: center;
+}
+
+.header .right h1{
+    font-size: 6rem;
+    margin-top: 0;
+}
+.header .right p{
+    margin-bottom: 0;
+}
+.header .left h1{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.main{
+    position: relative;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    row-gap: 4rem;
+}
+
+.remove{
+    display: none;
+}
+
+
+.main .rock{
+    place-self: center;
+    grid-column: 1/3;
+    border:25px solid rgb(228, 39, 39);
+}
+
+.main .paper{
+    border:25px solid rgb(39, 115, 228);
+}
+.main .scissor{
+    border:25px solid rgb(183, 185, 17);
+
+}
+
+.main >div:hover{
+    transform: scale(0.95);
+    box-shadow: 0px 0px 0px orange;
+}
+.main >div svg{
+    position: relative;
+    z-index: -2;
+}
+
+.main >div{
+    box-shadow: 5px 5px 0px orange;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
+.bg1{
+    position: absolute;
+    top: 9rem;
+}
+
+.bottom{
+   position: absolute;
+   bottom: 3rem;
+   right: 2rem;
+}
+
+.bottom button{
+    cursor: pointer;
+    padding: .5rem 2rem;
+    border-radius: 5px;
+    border: 1px solid rgb(126, 123, 123);
+    background-color: transparent;
+    color: white;
+    font-family: inherit;
+}
+
+.bottom button:hover{
+    border: 1px solid orange;
+}
+
+.rules{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    backdrop-filter: blur(20px);
+    padding: 2rem 5rem;
+    display: grid;
+    gap: 5rem;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+    border-radius: 20px;
+}
+
+.rules .head{
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rules .head h1{
+    letter-spacing: 5px;
+}
+
+.close{
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.close:hover{
+    transform: scale(1.2);
+}
+
+.block{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: rgba(0, 0, 0, 0.507);
+    z-index: 3;
+}
+
+.rblock{
+    z-index: -2;
+    display: none;
+}
+
+
+.winner{
+    margin-top: 10rem;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+.display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+
+
+.winner >div.choice1{
+    border: 25px solid rgb(116, 116, 231);
+    transition: width .5s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.winner .play{
+    display: grid;
+    place-items: center;
+}
+
+.play h1{
+    font-size: 3rem;
+    font-family: inherit;
+}
+
+.play button{
+    width: 150px;
+    border: none;
+    background-color: white;
+    border-radius: 6px;
+    color: #333;
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+.play button:hover{
+    background-color: orange;
+
+}
+
+
+
+
