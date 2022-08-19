@@ -54,6 +54,10 @@ let winner = document.querySelector('.winner');
  score.innerHTML = user_score;
  choice.forEach((btn)=>{
     btn.addEventListener('click',(e)=>{
+
+        if (e.target.id == 'target') {
+            
+        
         user.innerHTML = e.target.innerHTML;
         let borderis = getComputedStyle(e.target).border;
       
@@ -82,8 +86,9 @@ let winner = document.querySelector('.winner');
         winneris(user,computer,ispaper,isscissor,isrock);
         counter+=1;
 
-
+    }
     });
+
  });
 
 
